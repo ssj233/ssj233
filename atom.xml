@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hetijigemme-1438.github.io</id>
     <title>Gridea</title>
-    <updated>2020-06-21T06:04:42.014Z</updated>
+    <updated>2020-06-21T06:12:00.062Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hetijigemme-1438.github.io"/>
     <link rel="self" href="https://hetijigemme-1438.github.io/atom.xml"/>
@@ -21,263 +21,419 @@
 <li>汇编语言 - 1949<br>
 汇编语言诞生于1949年。本文我向你展示的是适用于Intel 8080的8位处理器的，发布于1974年4月的汇编语言经典代码。</li>
 </ol>
-<p>bdos    equ    0005H    ; BDOS entry point<br>
-start:  mvi    c,9      ; BDOS function: output string<br>
-lxi    d,msg$   ; address of msg<br>
-call   bdos<br>
-ret             ; return to CCP</p>
-<p>msg<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>:</mo><mi>d</mi><msup><mi>b</mi><mo mathvariant="normal">′</mo></msup><mi>H</mi><mi>e</mi><mi>l</mi><mi>l</mi><mi>o</mi><mo separator="true">,</mo><mi>w</mi><mi>o</mi><mi>r</mi><mi>l</mi><mi>d</mi><mo>!</mo></mrow><annotation encoding="application/x-tex">:   db    &#x27;Hello, world!</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.946332em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">d</span><span class="mord"><span class="mord mathdefault">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">d</span><span class="mclose">!</span></span></span></span>'<br>
-end     start<br>
-2. Fortran - 1957<br>
-Fortran是Formula Translation的衍生物，这是一种通用的交互式编程语言，特别适合于数值和科学计算。Fortran创建于1957年，下面是它的第一个“Hello, World!”程序：</p>
-<p>PROGRAM Hello<br>
-WRITE (<em>,</em>) 'Hello, World!'<br>
-STOP<br>
-END<br>
-Fortran 90 或 95的写法有所不同：</p>
-<p>PROGRAM Hello<br>
-WRITE (<em>,</em>) 'Hello, World!'<br>
-END PROGRAM Hello<br>
-3. Lisp - 1958<br>
-Lisp是最古老的编程语言系列，它既是交互式的又是函数式的。1958年，Lisp作为一种实用的演示程序模型被创建出来，但是直到1970和1980年代，Lisp才成为人工智能世界中非常流行的语言。</p>
+<pre><code>bdos    equ    0005H    ; BDOS entry point
+start:  mvi    c,9      ; BDOS function: output string
+        lxi    d,msg$   ; address of msg
+        call   bdos
+        ret             ; return to CCP
+  
+msg$:   db    'Hello, world!$'
+end     start
+</code></pre>
+<ol start="2">
+<li>Fortran - 1957<br>
+Fortran是Formula Translation的衍生物，这是一种通用的交互式编程语言，特别适合于数值和科学计算。Fortran创建于1957年，下面是它的第一个“Hello, World!”程序：</li>
+</ol>
+<pre><code>PROGRAM Hello
+WRITE (*,*) 'Hello, World!'
+STOP
+END
+</code></pre>
+<p>Fortran 90 或 95的写法有所不同：</p>
+<pre><code>PROGRAM Hello
+WRITE (*,*) 'Hello, World!'
+END PROGRAM Hello
+</code></pre>
+<ol start="3">
+<li>Lisp - 1958<br>
+Lisp是最古老的编程语言系列，它既是交互式的又是函数式的。1958年，Lisp作为一种实用的演示程序模型被创建出来，但是直到1970和1980年代，Lisp才成为人工智能世界中非常流行的语言。</li>
+</ol>
 <p>下面是Lisp的“Hello, World!”程序：</p>
-<p>(write-line &quot;Hello, World!&quot;)<br>
-4. Cobol - 1959<br>
-Cobol语言于1959年正式创立，并且在2019年刚刚庆祝过创立60周年。Cobol表示面向通用业务的语言（COmmon Business Oriented Language），目标是成为编程业务应用程序的通用语言。在2019年，Cobol仍被广泛应用于银行和保险的相关系统中。</p>
+<pre><code>(write-line &quot;Hello, World!&quot;)
+</code></pre>
+<ol start="4">
+<li>Cobol - 1959<br>
+Cobol语言于1959年正式创立，并且在2019年刚刚庆祝过创立60周年。Cobol表示面向通用业务的语言（COmmon Business Oriented Language），目标是成为编程业务应用程序的通用语言。在2019年，Cobol仍被广泛应用于银行和保险的相关系统中。</li>
+</ol>
 <p>下面是Cobol的“Hello, World!”程序：</p>
-<p>IDENTIFICATION DIVISION.<br>
-PROGRAM-ID. HELLO-WORLD.<br>
-PROCEDURE DIVISION.<br>
-DISPLAY &quot;Hello, World!&quot;<br>
-STOP RUN.<br>
-5. BASIC - 1964<br>
-BASIC是Beginner’s All-purpose Symbolic Instruction Code（初学者通用符号说明代码）的缩写。它是一门高级编程语言，其主要目标在于易用。它的“Hello, World!”程序如下：</p>
-<p>PRINT &quot;Hello, World!&quot;<br>
-END<br>
-6. Logo - 1968<br>
-Logo旨在成为易用的Lisp，通常被称为“Lisp without brackets”，Logs并不是面向对象编程语言，但它可以帮助你入门计算机编程。</p>
-<p>print [Hello World !]<br>
-7. B - 1969<br>
-B语言创建于1969年，它现在已经过时了，但它的计算机编程语言的发展史上发挥着重要的作用。因为正是B语言启发了现在广泛应用的C语言。</p>
-<p>main()<br>
-{<br>
-putstr(&quot;Hello world!*n&quot;);<br>
-return(0);<br>
-}<br>
-是不是语法层面就非常像C语言了。</p>
+<pre><code>IDENTIFICATION DIVISION.
+PROGRAM-ID. HELLO-WORLD.
+PROCEDURE DIVISION.
+    DISPLAY &quot;Hello, World!&quot;
+    STOP RUN.
+</code></pre>
+<ol start="5">
+<li>BASIC - 1964<br>
+BASIC是Beginner’s All-purpose Symbolic Instruction Code（初学者通用符号说明代码）的缩写。它是一门高级编程语言，其主要目标在于易用。它的“Hello, World!”程序如下：</li>
+</ol>
+<pre><code>PRINT &quot;Hello, World!&quot;
+END
+</code></pre>
+<ol start="6">
+<li>Logo - 1968<br>
+Logo旨在成为易用的Lisp，通常被称为“Lisp without brackets”，Logs并不是面向对象编程语言，但它可以帮助你入门计算机编程。</li>
+</ol>
+<pre><code>print [Hello World !]
+</code></pre>
+<ol start="7">
+<li>B - 1969<br>
+B语言创建于1969年，它现在已经过时了，但它的计算机编程语言的发展史上发挥着重要的作用。因为正是B语言启发了现在广泛应用的C语言。</li>
+</ol>
+<pre><code>main()
+{
+  putstr(&quot;Hello world!*n&quot;);
+  return(0);
+}
+</code></pre>
+<p>是不是语法层面就非常像C语言了。</p>
 <ol start="8">
 <li>Pascal - 1970<br>
 Pascal是一种交互式编程语言，它创建于1970年。它被设计出来主要出于教学目的，因为这个语言的特点是清晰，且严格的语法有助于良好的程序结构。</li>
 </ol>
-<p>begin<br>
-writeln('Hello, World!')<br>
-end.<br>
-Turbo Pascal是Pascal语言的集成开发环境，在1983年被创建，并在1980年代和1990年代取得了巨大的成功。</p>
+<pre><code>begin
+  writeln('Hello, World!')
+end.
+</code></pre>
+<p>Turbo Pascal是Pascal语言的集成开发环境，在1983年被创建，并在1980年代和1990年代取得了巨大的成功。</p>
 <p>Turbo Pascal的“Hello, World!“程序如下：</p>
-<p>program HelloWorld(output);<br>
-begin<br>
-writeln('Hello, World!');<br>
-readln;<br>
-end.<br>
-9. Forth - 1970<br>
-Forth是一门基于栈的交互式编程语言，由Charles H. Moore在1960年代发明。但它的第一个大版本是在1970年发布的。它于1994年被ANSI标准化，并于1997年被ISO采纳。2014年的Forth2012为语言的发展又焕发了生机。</p>
+<pre><code>program HelloWorld(output);
+begin
+  writeln('Hello, World!');
+  readln;
+end.
+</code></pre>
+<ol start="9">
+<li>Forth - 1970<br>
+Forth是一门基于栈的交互式编程语言，由Charles H. Moore在1960年代发明。但它的第一个大版本是在1970年发布的。它于1994年被ANSI标准化，并于1997年被ISO采纳。2014年的Forth2012为语言的发展又焕发了生机。</li>
+</ol>
 <p>下面是1970年版本Forth语言的“Hello, World!” 程序：</p>
-<p>: HELLO  ( -- )  .&quot; Hello, World!&quot; CR ;<br>
-HELLO<br>
-10. C - 1972<br>
-1972年的贝尔实验室中，Dennis Ritchie和Ken Thompson两位大佬为了开发UNIX发明了C语言。Ken Thompson曾开发过B语言，Dennis Ritchie决定通过对B语言添加类型来创造C语言。所以说B语言为C语言提供了灵感。</p>
-<p>#include &lt;stdio.h&gt;</p>
-<p>int main(void) {<br>
-printf(&quot;Hello, World!\n&quot;);<br>
-return 0;<br>
-}<br>
-11. Smalltalk - 1972<br>
-Smalltalk受到Lisp的启发，它是一门面向对象的，动态类型的编程语言，它被发明于1972年。Smalltalk是最早具有集成开发环境的编程语言之一。</p>
-<p>Transcript show: 'Hello, world!'; cr.<br>
-12. Prolog - 1972<br>
-Prolog是与人工智能和计算语言学相关的逻辑编程语言，被创建于1972年。</p>
-<p>:- write('Hello, World!'),nl.<br>
-13. ML - 1973<br>
-ML是Meta Language的简称，是一种以Lisp为基础的函数型编程语言。ML通常以Lisp为特征，具有类型。</p>
-<p>print &quot;Hello, World!\n&quot;;<br>
-14. Scheme - 1975<br>
-Scheme创建于1975年，是一种多范式编程语言，支持函数式和交互式编程。它是Lisp三种重要的变种之一，由Common Lisp和Clojure共同开发。</p>
-<p>(display &quot;Hello, World!&quot;) (newline)<br>
-15. SQL - 1978<br>
-SQL即结构化查询语言，是用于操作关系数据库的标准计算机编程语言。虽然在设计时不能创建简单的“Hello, World!“程序，但我想写出来应该是一个有趣的程序。</p>
-<p>CREATE TABLE message (text char(15));<br>
-INSERT INTO message (text) VALUES ('Hello, World!');<br>
-SELECT text FROM message;<br>
-DROP TABLE message;<br>
-16. C++ - 1980<br>
-C++是由Bjarne Stroustrup在1980年创建，他为C语言增加了类，在1983年得名C++。现在C++已经通过了ISO标准化，并广泛应用于工业和其他领域。</p>
-<p>#include <iostream><br>
-using namespace std;</p>
-<p>int main() {<br>
-cout &lt;&lt; &quot;Hello, World!&quot; &lt;&lt; endl;<br>
-return 0;<br>
-}<br>
-17. Ada - 1983<br>
-Ada是一种面向对象编程语言，其开发始于1980年初，并在1983年完成发布。之所以叫做Ada是为了纪念Ada Lovelace，这可能是历史上第一位女性计算机科学家。</p>
+<pre><code>
+: HELLO  ( -- )  .&quot; Hello, World!&quot; CR ;
+  HELLO
+</code></pre>
+<ol start="10">
+<li>C - 1972<br>
+1972年的贝尔实验室中，Dennis Ritchie和Ken Thompson两位大佬为了开发UNIX发明了C语言。Ken Thompson曾开发过B语言，Dennis Ritchie决定通过对B语言添加类型来创造C语言。所以说B语言为C语言提供了灵感。</li>
+</ol>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+  printf(&quot;Hello, World!\n&quot;);
+  return 0;
+}
+</code></pre>
+<ol start="11">
+<li>Smalltalk - 1972<br>
+Smalltalk受到Lisp的启发，它是一门面向对象的，动态类型的编程语言，它被发明于1972年。Smalltalk是最早具有集成开发环境的编程语言之一。</li>
+</ol>
+<pre><code>Transcript show: 'Hello, world!'; cr.
+</code></pre>
+<ol start="12">
+<li>Prolog - 1972<br>
+Prolog是与人工智能和计算语言学相关的逻辑编程语言，被创建于1972年。</li>
+</ol>
+<pre><code>:- write('Hello, World!'),nl.
+</code></pre>
+<ol start="13">
+<li>ML - 1973<br>
+ML是Meta Language的简称，是一种以Lisp为基础的函数型编程语言。ML通常以Lisp为特征，具有类型。</li>
+</ol>
+<pre><code>print &quot;Hello, World!\n&quot;;
+</code></pre>
+<ol start="14">
+<li>Scheme - 1975<br>
+Scheme创建于1975年，是一种多范式编程语言，支持函数式和交互式编程。它是Lisp三种重要的变种之一，由Common Lisp和Clojure共同开发。</li>
+</ol>
+<pre><code>(display &quot;Hello, World!&quot;) (newline)
+</code></pre>
+<ol start="15">
+<li>SQL - 1978<br>
+SQL即结构化查询语言，是用于操作关系数据库的标准计算机编程语言。虽然在设计时不能创建简单的“Hello, World!“程序，但我想写出来应该是一个有趣的程序。</li>
+</ol>
+<pre><code>CREATE TABLE message (text char(15));
+INSERT INTO message (text) VALUES ('Hello, World!');
+SELECT text FROM message;
+DROP TABLE message;
+</code></pre>
+<ol start="16">
+<li>C++ - 1980<br>
+C++是由Bjarne Stroustrup在1980年创建，他为C语言增加了类，在1983年得名C++。现在C++已经通过了ISO标准化，并广泛应用于工业和其他领域。</li>
+</ol>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+  cout &lt;&lt; &quot;Hello, World!&quot; &lt;&lt; endl;
+  return 0;
+}
+</code></pre>
+<ol start="17">
+<li>Ada - 1983<br>
+Ada是一种面向对象编程语言，其开发始于1980年初，并在1983年完成发布。之所以叫做Ada是为了纪念Ada Lovelace，这可能是历史上第一位女性计算机科学家。</li>
+</ol>
 <p>Ada通常用于需要很高可靠性和安全性的实时系统和嵌入式系统中。</p>
-<p>with Ada.Text_IO;<br>
-procedure Hello is<br>
-begin<br>
-Ada.Text_IO.Put_Line (&quot;Hello, World!&quot;);<br>
-end Hello;<br>
-18. Common Lisp - 1984<br>
-Common Lisp，通常缩写为CL，是ANSI标准化的Lisp语言规范。</p>
-<p>(princ &quot;Hello, World!&quot;)<br>
-19. MATLAB - 1984<br>
-MATLAB是一种用于数值计算的脚本语言，被用于“Matrix Laboratory”。MATLAB是由同名的开发环境模拟的。</p>
-<p>disp('Hello, World!')<br>
-20. Eiffel - 1985<br>
-Eiffel是一种围绕设计方法设计的面向对象编程语言，它具有当下非常流行的概念，例如“按约定编程”或复用。</p>
-<p>class<br>
-HELLO_WORLD<br>
-create<br>
-make<br>
-feature<br>
-make<br>
-do<br>
-print (&quot;Hello, world!%N&quot;)<br>
-end<br>
-end<br>
-21. Objective-C - 1986<br>
-Objective-C是一种面向对象编程语言，它像C++一样，是C语言的扩展，而与C++的区别在于它的动态消息分发或动态加载。</p>
+<pre><code>with Ada.Text_IO;
+procedure Hello is
+begin
+   Ada.Text_IO.Put_Line (&quot;Hello, World!&quot;);
+end Hello;
+</code></pre>
+<ol start="18">
+<li>Common Lisp - 1984<br>
+Common Lisp，通常缩写为CL，是ANSI标准化的Lisp语言规范。</li>
+</ol>
+<pre><code>(princ &quot;Hello, World!&quot;)
+</code></pre>
+<ol start="19">
+<li>MATLAB - 1984<br>
+MATLAB是一种用于数值计算的脚本语言，被用于“Matrix Laboratory”。MATLAB是由同名的开发环境模拟的。</li>
+</ol>
+<pre><code>disp('Hello, World!')
+</code></pre>
+<ol start="20">
+<li>Eiffel - 1985<br>
+Eiffel是一种围绕设计方法设计的面向对象编程语言，它具有当下非常流行的概念，例如“按约定编程”或复用。</li>
+</ol>
+<pre><code>class
+    HELLO_WORLD
+create
+    make
+feature
+    make
+        do
+            print (&quot;Hello, world!%N&quot;)
+        end
+end
+</code></pre>
+<ol start="21">
+<li>Objective-C - 1986<br>
+Objective-C是一种面向对象编程语言，它像C++一样，是C语言的扩展，而与C++的区别在于它的动态消息分发或动态加载。</li>
+</ol>
 <p>现在，它主要用于Apple操作系统：macOS以及iOS的衍生品。</p>
-<p>#import &lt;Foundation/Foundation.h&gt;</p>
-<p>int main() {<br>
-@autoreleasepool {<br>
-NSLog(@&quot;Hello, World!&quot;);<br>
-}<br>
-}<br>
-22. Erlang - 1986<br>
-Erlang是一种支持多种范式的编程语言：并发、实时、分布式。它基于Actor Model，具有容错能力以及代码热更新能力，所以Erlang开发的应用可用性通常很高。</p>
-<p>io:format(&quot;Hello world!~n&quot;).<br>
-23. Perl - 1987<br>
-Perl是由Larry Wall在1987年创建的编程语言，它可以轻松处理基于文本的消息。Perl是一种解释型语言，它受C语言的控制和打印结构以及shell脚本的启发。</p>
-<p>print &quot;Hello, World!\n&quot;;<br>
-24. Caml - 1987<br>
-Caml代表Categorical Abstract Machine Language（分类抽象机器语言），是一种通用的编程语言，旨在提高程序的安全性和可靠性。Caml是一种致力于函数式、交互式和面向对象风格，这也是一种非常独特的语言。</p>
-<p>print_string &quot;Hello, World!\n&quot;;;<br>
-25. Tcl - 1988<br>
-Tool Command Language（工具命令行语言），是John Ousterhout在1988年开发的一种脚本语言。它是一种动态类型语言，具有跨平台、可扩展、易学习等特点。并且可以轻松和C语言进行交互。</p>
+<pre><code>#import &lt;Foundation/Foundation.h&gt;
+ 
+int main() {
+    @autoreleasepool {
+        NSLog(@&quot;Hello, World!&quot;);
+    }
+}
+</code></pre>
+<ol start="22">
+<li>Erlang - 1986<br>
+Erlang是一种支持多种范式的编程语言：并发、实时、分布式。它基于Actor Model，具有容错能力以及代码热更新能力，所以Erlang开发的应用可用性通常很高。</li>
+</ol>
+<pre><code>io:format(&quot;Hello world!~n&quot;).
+</code></pre>
+<ol start="23">
+<li>Perl - 1987<br>
+Perl是由Larry Wall在1987年创建的编程语言，它可以轻松处理基于文本的消息。Perl是一种解释型语言，它受C语言的控制和打印结构以及shell脚本的启发。</li>
+</ol>
+<pre><code>print &quot;Hello, World!\n&quot;;
+</code></pre>
+<ol start="24">
+<li>Caml - 1987<br>
+Caml代表Categorical Abstract Machine Language（分类抽象机器语言），是一种通用的编程语言，旨在提高程序的安全性和可靠性。Caml是一种致力于函数式、交互式和面向对象风格，这也是一种非常独特的语言。</li>
+</ol>
+<pre><code>print_string &quot;Hello, World!\n&quot;;;
+</code></pre>
+<ol start="25">
+<li>Tcl - 1988<br>
+Tool Command Language（工具命令行语言），是John Ousterhout在1988年开发的一种脚本语言。它是一种动态类型语言，具有跨平台、可扩展、易学习等特点。并且可以轻松和C语言进行交互。</li>
+</ol>
 <p>在1990年， John Ousterhout又开发了Tcl的扩展——Tk，这是一个可移植的用于创建图形界面的库。我们今天所讨论的Tcl，多数情况是指Tcl和Tk的组合。</p>
-<p>puts &quot;Hello, World!&quot;<br>
-26. Haskell - 1990<br>
-Haskell是一种基于lambda计算和组合逻辑的函数式编程语言。</p>
-<p>main = putStrLn &quot;Hello, World!&quot;<br>
-27. Python - 1991<br>
-相信大家对Python都比较熟悉，即使没有过，基本上也都听说过。它是一门解释型语言，可以跨平台。Python支持结构体，函数和面向对象的交互式编程。随着AI的发展，近几年Python的热度也是持续上涨。</p>
+<pre><code>puts &quot;Hello, World!&quot;
+</code></pre>
+<ol start="26">
+<li>Haskell - 1990<br>
+Haskell是一种基于lambda计算和组合逻辑的函数式编程语言。</li>
+</ol>
+<pre><code>main = putStrLn &quot;Hello, World!&quot;
+</code></pre>
+<ol start="27">
+<li>Python - 1991<br>
+相信大家对Python都比较熟悉，即使没有过，基本上也都听说过。它是一门解释型语言，可以跨平台。Python支持结构体，函数和面向对象的交互式编程。随着AI的发展，近几年Python的热度也是持续上涨。</li>
+</ol>
 <p>下面是Python3.0以后版本“Hello, World“程序的写法。</p>
-<p>print(&quot;Hello, World!&quot;)<br>
-28. Visual Basic - 1991<br>
-Visual Basic，通常简称为VB，是第三代事件编程语言。微软也为其创建了集成开发环境。</p>
-<p>Public Sub Main()<br>
-Debug.Print &quot;Hello, World!&quot;<br>
-End Sub<br>
-29. Lua - 1993<br>
-Lua创建于1993年，是交互式编程语言。它专注于嵌入其他应用程序以对其进行扩展。</p>
-<p>print(&quot;Hello, World!&quot;)<br>
-30. Ruby - 1995<br>
-由于对Smalltalk和Lisp的开发感到沮丧，Yukihiro Matsumoto从1993年起开始在Emacs上设计Ruby语言，并于1995年发布了第一版。Ruby是解释型、面向对象、多范式的编程语言。</p>
-<p>puts 'Hello, World!'<br>
-31. Java - 1995<br>
-Java是James Gosling（我们常说的高司令）在1995年时创建的一门面向对象编程语言，到目前为止，Java仍然是业界最流行、使用最广泛的语言。使用Java可以开发从客户端到服务端到各种应用，Google选择Java作为Android开发语言这件事使得Java得到了更进一步的发展。</p>
-<p>class HelloWorld {<br>
-public static void main(String[] args) {<br>
-System.out.println(&quot;Hello, World!&quot;);<br>
-}<br>
-}<br>
-32. JavaScript - 1995<br>
-JavaScript是一门主要用于开发Web页面的脚本语言，但现在也可以用作服务端开发，如Nodejs。</p>
-<p>document.write('Hello, World!');<br>
-33. PHP - 1995<br>
-1995年对于编程语言而言绝对是非常重要的一年，在Java和JavaScript之后，PHP也于同年诞生。PHP是一门解释型的面向对象编程语言。</p>
-<? echo "Hello, World!" ?>
+<pre><code>
+print(&quot;Hello, World!&quot;)
+</code></pre>
+<ol start="28">
+<li>Visual Basic - 1991<br>
+Visual Basic，通常简称为VB，是第三代事件编程语言。微软也为其创建了集成开发环境。</li>
+</ol>
+<pre><code>Public Sub Main()
+    Debug.Print &quot;Hello, World!&quot;
+End Sub
+</code></pre>
+<ol start="29">
+<li>Lua - 1993<br>
+Lua创建于1993年，是交互式编程语言。它专注于嵌入其他应用程序以对其进行扩展。</li>
+</ol>
+<pre><code>print(&quot;Hello, World!&quot;).
+</code></pre>
+<ol start="30">
+<li>Ruby - 1995<br>
+由于对Smalltalk和Lisp的开发感到沮丧，Yukihiro Matsumoto从1993年起开始在Emacs上设计Ruby语言，并于1995年发布了第一版。Ruby是解释型、面向对象、多范式的编程语言。</li>
+</ol>
+<pre><code>puts 'Hello, World!'
+</code></pre>
+<ol start="31">
+<li>Java - 1995<br>
+Java是James Gosling（我们常说的高司令）在1995年时创建的一门面向对象编程语言，到目前为止，Java仍然是业界最流行、使用最广泛的语言。使用Java可以开发从客户端到服务端到各种应用，Google选择Java作为Android开发语言这件事使得Java得到了更进一步的发展。</li>
+</ol>
+<pre><code>class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println(&quot;Hello, World!&quot;);
+  }
+}
+</code></pre>
+<ol start="32">
+<li>JavaScript - 1995<br>
+JavaScript是一门主要用于开发Web页面的脚本语言，但现在也可以用作服务端开发，如Nodejs。</li>
+</ol>
+<pre><code>document.write('Hello, World!');
+</code></pre>
+<ol start="33">
+<li>PHP - 1995<br>
+1995年对于编程语言而言绝对是非常重要的一年，在Java和JavaScript之后，PHP也于同年诞生。PHP是一门解释型的面向对象编程语言。</li>
+</ol>
+<pre><code>&lt;? echo &quot;Hello, World!&quot; ?&gt;
+</code></pre>
 <ol start="34">
 <li>Rebol - 1997<br>
 Rebol是一种高级脚本语言，自称“消息传递语言”。</li>
 </ol>
-<p>print &quot;Hello, World!&quot;<br>
-35. ActionScript — 1998<br>
-ActionScript可以用于开发客户端应用程序，如Adobe Flash和Adobe Flex；也可以用于服务端开发（Flash media server, JRun, Macromedia Generator）。现在，ActionScript在Unity图形引擎中被当作脚本语言使用。</p>
-<p>package {<br>
-public class HelloWorld {<br>
-public function HelloWorld() {<br>
-trace(&quot;Hello World !&quot;);<br>
-}<br>
-}<br>
-}<br>
-36. D - 1999<br>
-D语言是一门面向对象编程语言，它的设计借鉴于许多语言，包括C++、Java和Eiffel。D语言是一门优秀的语言，但是一直都没有像它的创造者期望的那样获得成功。</p>
-<p>import std.stdio;</p>
-<p>void main () {<br>
-writefln(&quot;Hello, World!&quot;);<br>
-}<br>
-37. C# - 2000<br>
-2000年，微软就Java语言与Sun公司发生争议，随后便创造了C#，C#是一种被设计为在http://Microsoft.NET平台上开发的面向对象的编程语言，它是由C++和Java派生而来，使用了许多它们的通用特性和概念。C#也可以用来在http://ASP.NET平台上开发Web应用。</p>
-<p>using System;</p>
-<p>internal static class HelloWorld {<br>
-private static void Main() {<br>
-Console.WriteLine(&quot;Hello, World!&quot;);<br>
-}<br>
-}<br>
-38. Groovy - 2003<br>
-Groovy是运行在Java虚拟机上的一门面向对象编程语言，它是Java的超集，其设计受到了Python、Ruby和Smalltalk的启发。</p>
-<p>println &quot;Hello, World!&quot;<br>
-39. Scala - 2003<br>
-Scala是一种多范式编程语言，旨在以简洁、优雅的形式表达常见的编程模型。Scala通过静态类型集成了面向对象和函数式编程的范例。</p>
-<p>object HelloWorld extends App {<br>
-println(&quot;Hello, World!&quot;)<br>
-}<br>
-40. F# - 2005<br>
-F#是一门在.NET平台上开发的函数式、面向对象编程语言。F#源自与它高度兼容的OCaml，它们都属于ML语言这一系列的。</p>
-<p>printfn &quot;Hello, World!&quot;<br>
-41. Windows PowerShell - 2006<br>
-Windows PowerShell是Microsoft开发的软件套件，包括命令行界面，称为PowerShell的脚本语言和开发套件。 从Windows 7开始，PowerShell已作为标准配置提供。</p>
-<p>echo &quot;Hello, World!&quot;<br>
-42. Clojure - 2007<br>
-Clojure是编译型、跨平台的函数式编程语言，它可以安全、简单的开发分布式系统。Clojure是Lisp的三种主要方言之一。Clojure可以编译成Java字节码，JavaScript代码或者是.NET字节码，因此它可以运行在JVM、CLR和浏览器上。</p>
-<p>(println &quot;Hello, World!&quot;)<br>
-43. Go - 2009<br>
-Go是一种编译型的支持并发的编程语言，它的设计受到了C和Pascal的启发，该语言由Google从Robert Griesemer，Rob Pike和Ken Thompson的最初概念开发而来。没错，这个Ken Thompson就是在1969年设计B语言的人！</p>
-<p>package main</p>
-<p>import &quot;fmt&quot;</p>
-<p>func main() {<br>
-fmt.Println(&quot;Hello, World!&quot;)<br>
-}<br>
-44. Rust - 2010<br>
-Rust是由Mozilla设计并开发的一门多范式的编译型编程语言。Rust被设计为“安全、并发、实用的语言”，在某些方面支持函数式编程风格，面向对象编程。Rust被认为有望替代C++。</p>
-<p>fn main() {<br>
-println(&quot;Hello, World!&quot;);<br>
-}<br>
-45. Dart - 2011<br>
-Dart是由Google开发的用于web应用的编程语言，它最初的目标是替代JavaScript。目前，Dart的目标还没有实现，开发人员的首要任务是可以将Dart转换成与所有现代浏览器兼容的JavaScript代码。Dart也可以用于服务端的开发。</p>
+<pre><code>print &quot;Hello, World!&quot;
+</code></pre>
+<ol start="35">
+<li>ActionScript — 1998<br>
+ActionScript可以用于开发客户端应用程序，如Adobe Flash和Adobe Flex；也可以用于服务端开发（Flash media server, JRun, Macromedia Generator）。现在，ActionScript在Unity图形引擎中被当作脚本语言使用。</li>
+</ol>
+<pre><code>package {
+  public class HelloWorld {
+    public function HelloWorld() {
+      trace(&quot;Hello World !&quot;);
+    }
+  }
+}
+</code></pre>
+<ol start="36">
+<li>D - 1999<br>
+D语言是一门面向对象编程语言，它的设计借鉴于许多语言，包括C++、Java和Eiffel。D语言是一门优秀的语言，但是一直都没有像它的创造者期望的那样获得成功。</li>
+</ol>
+<pre><code>import std.stdio;
+
+void main () {
+  writefln(&quot;Hello, World!&quot;);
+}
+</code></pre>
+<ol start="37">
+<li>C# - 2000<br>
+2000年，微软就Java语言与Sun公司发生争议，随后便创造了C#，C#是一种被设计为在http://Microsoft.NET平台上开发的面向对象的编程语言，它是由C++和Java派生而来，使用了许多它们的通用特性和概念。C#也可以用来在http://ASP.NET平台上开发Web应用。</li>
+</ol>
+<pre><code>using System;
+
+internal static class HelloWorld {
+  private static void Main() {
+    Console.WriteLine(&quot;Hello, World!&quot;);
+  }
+}
+</code></pre>
+<ol start="38">
+<li>Groovy - 2003<br>
+Groovy是运行在Java虚拟机上的一门面向对象编程语言，它是Java的超集，其设计受到了Python、Ruby和Smalltalk的启发。</li>
+</ol>
+<pre><code>println &quot;Hello, World!&quot;
+</code></pre>
+<ol start="39">
+<li>Scala - 2003<br>
+Scala是一种多范式编程语言，旨在以简洁、优雅的形式表达常见的编程模型。Scala通过静态类型集成了面向对象和函数式编程的范例。</li>
+</ol>
+<pre><code>object HelloWorld extends App {
+  println(&quot;Hello, World!&quot;)
+}
+</code></pre>
+<ol start="40">
+<li>F# - 2005<br>
+F#是一门在.NET平台上开发的函数式、面向对象编程语言。F#源自与它高度兼容的OCaml，它们都属于ML语言这一系列的。</li>
+</ol>
+<pre><code>printfn &quot;Hello, World!&quot;
+</code></pre>
+<ol start="41">
+<li>Windows PowerShell - 2006<br>
+Windows PowerShell是Microsoft开发的软件套件，包括命令行界面，称为PowerShell的脚本语言和开发套件。 从Windows 7开始，PowerShell已作为标准配置提供。</li>
+</ol>
+<pre><code>echo &quot;Hello, World!&quot;
+</code></pre>
+<ol start="42">
+<li>Clojure - 2007<br>
+Clojure是编译型、跨平台的函数式编程语言，它可以安全、简单的开发分布式系统。Clojure是Lisp的三种主要方言之一。Clojure可以编译成Java字节码，JavaScript代码或者是.NET字节码，因此它可以运行在JVM、CLR和浏览器上。</li>
+</ol>
+<pre><code>(println &quot;Hello, World!&quot;)
+</code></pre>
+<ol start="43">
+<li>Go - 2009<br>
+Go是一种编译型的支持并发的编程语言，它的设计受到了C和Pascal的启发，该语言由Google从Robert Griesemer，Rob Pike和Ken Thompson的最初概念开发而来。没错，这个Ken Thompson就是在1969年设计B语言的人！</li>
+</ol>
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+  fmt.Println(&quot;Hello, World!&quot;)
+}
+</code></pre>
+<ol start="44">
+<li>Rust - 2010<br>
+Rust是由Mozilla设计并开发的一门多范式的编译型编程语言。Rust被设计为“安全、并发、实用的语言”，在某些方面支持函数式编程风格，面向对象编程。Rust被认为有望替代C++。</li>
+</ol>
+<pre><code>fn main() {
+    println(&quot;Hello, World!&quot;);
+}
+</code></pre>
+<ol start="45">
+<li>Dart - 2011<br>
+Dart是由Google开发的用于web应用的编程语言，它最初的目标是替代JavaScript。目前，Dart的目标还没有实现，开发人员的首要任务是可以将Dart转换成与所有现代浏览器兼容的JavaScript代码。Dart也可以用于服务端的开发。</li>
+</ol>
 <p>Dart最近的势头很猛，主要是因为它是手机端流行框架Flutter的开发语言。</p>
-<p>main() {<br>
-print('Hello, World!');<br>
-}<br>
-46. Kotlin — 2011<br>
-Kotlin是一门面向对象编程语言，支持静态类型，可以被编译成字节码运行在Java虚拟机上。也可以编译成JavaScript语言，或者在其他多个平台运行的语言。（感谢LLVM）2017年，Google使Kotlin成为继Java之后Android正式支持的第二种语言。</p>
-<p>fun main(args: Array<String>) {<br>
-println(&quot;Hello, World!&quot;)<br>
-}<br>
-47. Ceylon - 2011<br>
-Ceylon是由“红帽”创建的开源的强类型和静态类型的高级编程语言，它的语法类似于Java。可以将其编译成Java字节码和JavaScript。</p>
-<p>void hello() {<br>
-print(&quot;Hello, World!&quot;);<br>
-}<br>
-48. TypeScript - 2012<br>
-TypeScript是由微软开发的免费、开源的编程语言。用于改善和保护JavaScript代码的生产。TypeScript是JavaScript的超集，可以转换为JavaScript，以便由任何Web浏览器或JavaScript引擎解释。</p>
-<p>console.log(&quot;Hello, World!&quot;);<br>
-49. Julia - 2012<br>
-Julia是用于科学计算的高级、强大、动态的编程语言，使用的是其他类似开发环境（例如MATLAB、R或Python）的用户熟悉的语法。</p>
-<p>println(&quot;Hello, World!&quot;)<br>
-50. Swift - 2014<br>
-Swift是一门编译型、多范式的编程语言，它简单、高效、安全。它由苹果开发并开源。使其成为与Objective-C一样开发iOS移动应用的解决方案。</p>
-<p>print(&quot;Hello, World!&quot;)</p>
+<pre><code>main() {
+  print('Hello, World!');
+}
+</code></pre>
+<ol start="46">
+<li>Kotlin — 2011<br>
+Kotlin是一门面向对象编程语言，支持静态类型，可以被编译成字节码运行在Java虚拟机上。也可以编译成JavaScript语言，或者在其他多个平台运行的语言。（感谢LLVM）2017年，Google使Kotlin成为继Java之后Android正式支持的第二种语言。</li>
+</ol>
+<pre><code>fun main(args: Array&lt;String&gt;) {
+    println(&quot;Hello, World!&quot;)
+}
+</code></pre>
+<ol start="47">
+<li>Ceylon - 2011<br>
+Ceylon是由“红帽”创建的开源的强类型和静态类型的高级编程语言，它的语法类似于Java。可以将其编译成Java字节码和JavaScript。</li>
+</ol>
+<pre><code>void hello() {
+    print(&quot;Hello, World!&quot;);
+}
+</code></pre>
+<ol start="48">
+<li>TypeScript - 2012<br>
+TypeScript是由微软开发的免费、开源的编程语言。用于改善和保护JavaScript代码的生产。TypeScript是JavaScript的超集，可以转换为JavaScript，以便由任何Web浏览器或JavaScript引擎解释。</li>
+</ol>
+<pre><code>console.log(&quot;Hello, World!&quot;);
+</code></pre>
+<ol start="49">
+<li>Julia - 2012<br>
+Julia是用于科学计算的高级、强大、动态的编程语言，使用的是其他类似开发环境（例如MATLAB、R或Python）的用户熟悉的语法。</li>
+</ol>
+<pre><code>println(&quot;Hello, World!&quot;)
+</code></pre>
+<ol start="50">
+<li>Swift - 2014<br>
+Swift是一门编译型、多范式的编程语言，它简单、高效、安全。它由苹果开发并开源。使其成为与Objective-C一样开发iOS移动应用的解决方案。</li>
+</ol>
+<pre><code>print(&quot;Hello, World!&quot;)
+</code></pre>
 ]]></content>
     </entry>
     <entry>
