@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>markdown语法 | Gridea</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://hetijigemme-1438.github.io/favicon.ico?v=1593142057487">
+<link rel="stylesheet" href="https://hetijigemme-1438.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。Markdown具有一系列衍生版本，用于扩展Markdown的功能（如表格、脚注、内嵌HTML等等
+你可以使用markdow..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://hetijigemme-1438.github.io">
+        <img src="https://hetijigemme-1438.github.io/images/avatar.png?v=1593142057487" class="site-logo">
+        <h1 class="site-title">Gridea</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      well
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://hetijigemme-1438.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">markdown语法</h2>
+            <div class="post-date">2020-06-26</div>
+            
+              <div class="feature-container" style="background-image: url('https://hetijigemme-1438.github.io/post-images/markdown-yu-fa.jpg')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。Markdown具有一系列衍生版本，用于扩展Markdown的功能（如表格、脚注、内嵌HTML等等<br>
+你可以使用<a href="http://www.mdeditor.com/">markdown在线编辑器</a><br>
+或<a href="https://typora.io/">typora</a></p>
+<pre><code>            以及gridea😁
+</code></pre>
+<!-- more -->
+<h1 id="markdown语法总结">markdown语法总结</h1>
+<ol>
+<li>
+<p>标题</p>
+<ul>
+<li>标题使用<code>#</code></li>
+<li>几个<code>#</code>就是几级标题</li>
+</ul>
+</li>
+<li>
+<p>字体</p>
+<ul>
+<li><em>斜体</em>:<pre><code class="language-markdown">*斜体*
+</code></pre>
+</li>
+</ul>
+<p><strong>粗体</strong>:<br>
+<code>markdown 	 **粗体**</code></p>
+<ul>
+<li>
+<p><em><strong>斜体加粗</strong></em>:</p>
+<pre><code class="language-markdown">***斜体加粗***
+</code></pre>
+</li>
+<li>
+<p><s>删除线</s>:</p>
+<pre><code class="language-markdown">~~删除线~~
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>引用</p>
+<blockquote>
+<p>这是引用的内容</p>
+<blockquote>
+<p>这是引用的内容</p>
+<blockquote>
+<p>这是引用的内容</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>这是引用的内容<br>
+233</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<pre><code class="language-markdown">&gt; 这是引用的内容
+&gt; &gt; 这是引用的内容
+&gt; &gt; &gt;这是引用的内容
+&gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; 这是引用的内容
+&gt; &gt; &gt; &gt; &gt; 233
+</code></pre>
+</li>
+<li>
+<p>分割线</p>
+<hr>
+<hr>
+<hr>
+<pre><code class="language-markdown">---
+***
+*******************************
+</code></pre>
+</li>
+<li>
+<p>图片</p>
+<pre><code>![图片下面的文字](图片地址 ''鼠标移到图片上时显示的内容'')
+</code></pre>
+</li>
+<li>
+<p>超链接</p>
+<pre><code>[超链接名](超链接地址 &quot;超链接title&quot;)
+</code></pre>
+</li>
+<li>
+<p>列表</p>
+<ul>
+<li>列表内容</li>
+</ul>
+<ul>
+<li>列表内容</li>
+</ul>
+<ul>
+<li>列表内容</li>
+</ul>
+<pre><code>- 列表内容
++ 列表内容
+* 列表内容
+</code></pre>
+<ol>
+<li>列表内容</li>
+<li>列表内容</li>
+<li>列表内容</li>
+</ol>
+<pre><code class="language-undefined">1. 列表内容
+2. 列表内容
+3. 列表内容
+</code></pre>
+<h5 id="列表嵌套">列表嵌套:</h5>
+<p><strong>上一级和下一级之间敲三个空格即可</strong></p>
+</li>
+<li>
+<p>列表</p>
+<pre><code class="language-markdown">表头|表头|表头
+---|:--:|---:
+内容|内容|内容
+内容|内容|内容
+
+第二行分割表头和内容。
+- 有一个就行，为了对齐，多加了几个
+文字默认居左
+-两边加：表示文字居中
+-右边加：表示文字居右
+注：原生的语法两边都要用 | 包起来。此处省略
+</code></pre>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th style="text-align:center">表头</th>
+<th style="text-align:right">表头</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内容</td>
+<td style="text-align:center">内容</td>
+<td style="text-align:right">内容</td>
+</tr>
+<tr>
+<td>内容</td>
+<td style="text-align:center">内容</td>
+<td style="text-align:right">内容</td>
+</tr>
+</tbody>
+</table>
+<ol start="9">
+<li>
+<p>代码</p>
+<p>单行代码：代码之间分别用`包起来</p>
+<p>代码块：代码之间分别用三个`包起来，且两边的反引号单独占一行</p>
+</li>
+<li>
+<p>流程图</p>
+</li>
+</ol>
+<pre><code class="language-flow">st=&gt;start: 开始
+op=&gt;operation: My Operation
+cond=&gt;condition: Yes or No?
+e=&gt;end
+st-&gt;op-&gt;cond
+cond(yes)-&gt;e
+cond(no)-&gt;op
+&amp;
+</code></pre>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://hetijigemme-1438.github.io/post/cmo-fang/">
+                  <h3 class="post-title">
+                    C++魔方
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
