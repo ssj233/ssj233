@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hetijigemme-1438.github.io</id>
-    <title>Gridea</title>
-    <updated>2020-06-26T03:27:42.920Z</updated>
+    <title>myweb</title>
+    <updated>2020-06-26T03:35:11.147Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hetijigemme-1438.github.io"/>
     <link rel="self" href="https://hetijigemme-1438.github.io/atom.xml"/>
     <subtitle>well</subtitle>
     <logo>https://hetijigemme-1438.github.io/images/avatar.png</logo>
     <icon>https://hetijigemme-1438.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, myweb</rights>
     <entry>
         <title type="html"><![CDATA[markdown语法]]></title>
         <id>https://hetijigemme-1438.github.io/post/markdown-yu-fa/</id>
@@ -35,6 +35,10 @@
         <link href="https://hetijigemme-1438.github.io/post/cmo-fang/">
         </link>
         <updated>2020-06-25T13:32:37.000Z</updated>
+        <summary type="html"><![CDATA[<p>当你用C++模拟出了一个二阶魔方😜</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>当你用C++模拟出了一个二阶魔方😜</p>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
