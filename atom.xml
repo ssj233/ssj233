@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hetijigemme-1438.github.io</id>
     <title>myweb</title>
-    <updated>2020-06-26T03:36:53.102Z</updated>
+    <updated>2020-06-26T03:39:49.977Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hetijigemme-1438.github.io"/>
     <link rel="self" href="https://hetijigemme-1438.github.io/atom.xml"/>
@@ -38,6 +38,21 @@
         <summary type="html"><![CDATA[<p>当你用C++模拟出了一个二阶魔方😜</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>当你用C++模拟出了一个二阶魔方😜</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于]]></title>
+        <id>https://hetijigemme-1438.github.io/post/about/</id>
+        <link href="https://hetijigemme-1438.github.io/post/about/">
+        </link>
+        <updated>2019-01-25T11:09:48.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
+</blockquote>
 ]]></content>
     </entry>
     <entry>
