@@ -1,64 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://hetijigemme-1438.github.io</id>
+    <id>http://233ssj.github.io</id>
     <title>myweb</title>
-    <updated>2020-06-26T03:39:49.977Z</updated>
+    <updated>2021-01-13T10:21:41.544Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://hetijigemme-1438.github.io"/>
-    <link rel="self" href="https://hetijigemme-1438.github.io/atom.xml"/>
+    <link rel="alternate" href="http://233ssj.github.io"/>
+    <link rel="self" href="http://233ssj.github.io/atom.xml"/>
     <subtitle>well</subtitle>
-    <logo>https://hetijigemme-1438.github.io/images/avatar.png</logo>
-    <icon>https://hetijigemme-1438.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, myweb</rights>
-    <entry>
-        <title type="html"><![CDATA[markdown语法]]></title>
-        <id>https://hetijigemme-1438.github.io/post/markdown-yu-fa/</id>
-        <link href="https://hetijigemme-1438.github.io/post/markdown-yu-fa/">
-        </link>
-        <updated>2020-06-26T03:20:17.000Z</updated>
-        <summary type="html"><![CDATA[<p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。Markdown具有一系列衍生版本，用于扩展Markdown的功能（如表格、脚注、内嵌HTML等等<br>
-你可以使用<a href="http://www.mdeditor.com/">markdown在线编辑器</a><br>
-或<a href="https://typora.io/">typora</a></p>
-<pre><code>            以及gridea😁
-</code></pre>
-]]></summary>
-        <content type="html"><![CDATA[<p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。Markdown具有一系列衍生版本，用于扩展Markdown的功能（如表格、脚注、内嵌HTML等等<br>
-你可以使用<a href="http://www.mdeditor.com/">markdown在线编辑器</a><br>
-或<a href="https://typora.io/">typora</a></p>
-<pre><code>            以及gridea😁
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C++魔方]]></title>
-        <id>https://hetijigemme-1438.github.io/post/cmo-fang/</id>
-        <link href="https://hetijigemme-1438.github.io/post/cmo-fang/">
-        </link>
-        <updated>2020-06-25T13:32:37.000Z</updated>
-        <summary type="html"><![CDATA[<p>当你用C++模拟出了一个二阶魔方😜</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>当你用C++模拟出了一个二阶魔方😜</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于]]></title>
-        <id>https://hetijigemme-1438.github.io/post/about/</id>
-        <link href="https://hetijigemme-1438.github.io/post/about/">
-        </link>
-        <updated>2019-01-25T11:09:48.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-]]></content>
-    </entry>
+    <logo>http://233ssj.github.io/images/avatar.png</logo>
+    <icon>http://233ssj.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2021, myweb</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://hetijigemme-1438.github.io/post/hello-gridea/</id>
-        <link href="https://hetijigemme-1438.github.io/post/hello-gridea/">
+        <id>http://233ssj.github.io/post/hello-gridea/</id>
+        <link href="http://233ssj.github.io/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
